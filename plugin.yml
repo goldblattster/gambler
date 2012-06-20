@@ -1,0 +1,19 @@
+name: Gambler
+main: net.openprog.gambler.Gambler
+author: Sushi
+version: b6
+depend: [Vault]
+commands:
+  gambler:
+    description: Use basic functions of the gambler plugin.
+  gamble:
+    description: Use basic gambling function.
+    permission: gambler.gambler
+    permission-message: You don't have permission to do that!
+permissions:
+  gambler.admin:
+    description: Gives access to admin commands.
+    default: op
+  gambler.gambler:
+    description: Given to people who may gamble.
+    default: true
