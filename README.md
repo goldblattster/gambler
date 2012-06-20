@@ -14,13 +14,15 @@ Gambling is totally rad. Sometimes.
 3. ???
 
 ##Permissions
-  permissions:
-    gambler.admin:
-      description: Gives access to admin commands.
-      default: op
-    gambler.gambler:
-      description: Given to people who may gamble.
-      default: true
+'''yaml
+permissions:
+  gambler.admin:
+    description: Gives access to admin commands.
+    default: op
+  gambler.gambler:
+    description: Given to people who may gamble.
+    default: true
+'''
 
 ##Commands
 * /gambler help - View plugin functions.
