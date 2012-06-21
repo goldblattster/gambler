@@ -66,6 +66,7 @@ public class Gambler extends JavaPlugin {
 		getConfig().addDefault("max-bet", 1000);
 		getConfig().addDefault("winning-diceroll-threshold", 65);
 		getConfig().addDefault("dicerollmax", 100);
+		getConfig().addDefault("roll-notification", false);
 		getConfig().options().copyDefaults(true);
 		saveConfig();
 	}

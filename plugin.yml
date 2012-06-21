@@ -1,7 +1,7 @@
 name: Gambler
 main: net.openprog.gambler.Gambler
 author: Sushi
-version: b8
+version: b17
 depend: [Vault]
 commands:
   gambler:
