@@ -43,15 +43,16 @@ public class Commandgamble implements CommandExecutor {
 					
 					if (bettingamount - 1 < playerbalance) {
 						Gambler.econ.withdrawPlayer(player.getName(), bettingamount);
-						sender.sendMessage(Gambler.chatPrefix + bettingamount + " has been removed from your balance. Betting...");
+						if (!(plugin.getConfig().getBoolean("roll-notification"))) {
+							sender.sendMessage(Gambler.chatPrefix + bettingamount + " has been removed from your balance. Betting...");
+						}
 						
 						Random gen = new Random();
 						int drm = plugin.getConfig().getInt("dicerollmax");
 						int randomInt = gen.nextInt(drm);
 						
 						if (plugin.getConfig().getBoolean("roll-notification")) {
-							sender.sendMessage(Gambler.chatPrefix + "You rolled " + randomInt + " on a dice with " + plugin.getConfig().getInt("dicerollmax") + " sides.");
-							sender.sendMessage(Gambler.chatPrefix + "You need to roll more than " + plugin.getConfig().getInt("winning-diceroll-threshold") + " in order to win.");
+							sender.sendMessage(Gambler.chatPrefix + "Betting " + bettingamount + ", you roll " + randomInt + " on a dice with " + plugin.getConfig().getInt("dicerollmax") + " faces. To win, you need to roll more than " + plugin.getConfig().getInt("winning-diceroll-threshold") + ".");
 						}
 						
 						if (randomInt > plugin.getConfig().getInt("winning-diceroll-threshold") - 1) {
