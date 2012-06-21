@@ -34,6 +34,8 @@ Gambling is totally rad. Sometimes.
     winning-diceroll-threshold: 65
     # Modify the dice roll max in order to choose the extent of random numbers to choose from (for example, by default, it chooses a random number between 1-100
     dicerollmax: 100
+    # When true, gamblers will see a message telling them what they rolled (on dice roll)
+    roll-notification: false
 
 ##Suggestions/Questions
 Do you have suggestions, new features, or questions for the plugin? Just comment on the bukkitdev page (http://dev.bukkit.org/server-mods/gambler/) and I will answer your questions to the best of my ability. I would love new features/ideas to add to this plugin!
